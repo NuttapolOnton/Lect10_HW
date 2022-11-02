@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  item: one
+  price: 1.5
+  timestamp: 2022-11-01 21:46:10
+
+two:
+  user: two
+  item: two
+  price: 1.5
+  timestamp: 2022-11-01 21:46:10

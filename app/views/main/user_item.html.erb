@@ -1,0 +1,27 @@
+<h>item list</h>
+<%if @item_list != nil and @item_list.length > 0%>
+    <table class = "table table-striped table-bordered">
+        <tr>
+            <td>name</td>
+            <td>price</td>
+            <td>stock</td>
+            <td>edit</td>
+            <td>delete</td>
+        </tr>
+    <%@item_list.each do |i|%>
+        <tr>
+            <td><%=i.name%></td>
+            <td><%=i.price%></td>
+            <td><%=i.stock%></td>
+            <td><%= link_to "Edit", edit_item_path(i) ,class: "btn btn-primary"%> </td>
+            <td><%= button_to "Delete", i, method: :delete, class: "btn btn-danger"%></td>
+        </tr>
+        
+    <%end%>
+        <tr>
+        <td><%=link_to "new", controller: "items", action: "new"%></td>
+        </tr>
+<%else%>
+    <p>No item</p>
+    <td><%=link_to "new", controller: "items", action: "new"%></td>
+<%end%>
